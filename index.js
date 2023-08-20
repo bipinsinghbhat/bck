@@ -11,6 +11,10 @@ app.use(cors())
 app.use("/users",userRouter)
 app.use("/notes",noteRouter)
 
+app.get("/",async(req,res)=>{
+  res.status(200).send("Welcome to home page")
+})
+
 app.listen(4500,async()=>{
       try {
         await connection
